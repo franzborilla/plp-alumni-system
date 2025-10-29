@@ -36,7 +36,7 @@ return new class extends Migration
             $table->text('job_description')->nullable();
             $table->enum('status', ['pending', 'approved', 'denied'])
                 ->default('pending');
-            $table->date('date_posted')->default(DB::raw('CURRENT_DATE'));
+            $table->timestamp('date_posted')->useCurrent();
             $table->string('application_link')->nullable();
 
 

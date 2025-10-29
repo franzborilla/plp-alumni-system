@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('salary_range')->nullable();
             $table->text('job_description')->nullable();
             $table->enum('status', ['active', 'inactive'])->default('active');
-            $table->date('date_posted')->default(DB::raw('CURRENT_DATE'));
+            $table->timestamp('date_posted')->useCurrent();
             $table->string('application_link')->nullable();
 
             $table->timestamps();
