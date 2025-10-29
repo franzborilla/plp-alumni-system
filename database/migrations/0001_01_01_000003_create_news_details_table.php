@@ -19,7 +19,7 @@ return new class extends Migration
             $table->unsignedTinyInteger('slot_number')->unique();
 
             $table->string('title')->nullable();
-            $table->date('date')->default(DB::raw('CURRENT_DATE'))->nullable();
+            $table->timestamp('date')->useCurrent();
             $table->text('description')->nullable();
             $table->string('image_path')->nullable();
             $table->timestamps();
