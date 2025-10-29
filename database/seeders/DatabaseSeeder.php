@@ -23,8 +23,24 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         $this->call([
-            ReferenceTablesSeeder::class,
-            AlumniInfoSeeder::class,
+                        ReferenceTablesSeeder::class,
+            UsersSeeder::class,
+            AlumniDetailsSeeder::class,
+            AlumniEducationSeeder::class,
+            AlumniGradEducSeeder::class,
+            AlumniFirstEmploymentSeeder::class,
+            AlumniCurrentEmploymentSeeder::class,
+            AlumniPastEmploymentSeeder::class,
+            SkillSeeder::class,
+            JobDetailSeeder::class,
+            JobSkillSeeder::class,
+            AlumniSkillSeeder::class,
+            ForumSeeder::class,
+            ForumCommentSeeder::class,
+            EventDetailsTableSeeder::class,
+            EventAttendeesTableSeeder::class,
+            SubmittedJobSeeder::class,
+            AuditLogsSeeder::class,
         ]);
     }
 }
