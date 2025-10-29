@@ -32,7 +32,7 @@ return new class extends Migration
             $table->enum('status', ['upcoming', 'done'])->default('upcoming');
             $table->date('rsvp_deadline')->nullable();
             $table->string('link')->nullable();
-            $table->date('event_date_posted')->default(DB::raw('CURRENT_DATE'));
+            $table->timestamp('event_date_posted')->useCurrent();
             $table->timestamps();
             $table->softDeletes();
         });
